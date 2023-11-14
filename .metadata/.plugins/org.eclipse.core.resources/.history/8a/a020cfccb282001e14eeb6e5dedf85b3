@@ -1,0 +1,23 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		String var = "This is Harish";
+		List<String> vlist = Arrays.asList(var.split(" "));
+		vlist.stream().forEach(e->System.out.println(e));
+
+		System.out.println("------");
+		
+		var = "Harish";
+		List<Character> chList = var.chars().mapToObj(e->(char)e).collect(Collectors.toList());
+		chList.stream().forEach(System.out::println);
+		
+		var = "ThisisHarish";
+		Arrays.asList(var.split("")).stream().forEach(e->System.out.println(e));
+	}
+
+}

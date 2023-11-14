@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Test1 {
+
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 1st String");
+        String u1 = sc.next();
+        System.out.println("Enter 2nd String");
+        String u2 = sc.next();
+        System.out.println("Entered Strings are "+ u1 + " , "+ u2);
+		
+	}
+}

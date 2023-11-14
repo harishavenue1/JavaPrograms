@@ -1,0 +1,46 @@
+// tip: each public class is put in its own file
+import java.util.*;
+public class Test1
+{
+    // tip: arguments are passed via the field below this editor
+    public static void main(String[] args)
+    {
+        List<String> li = Arrays.asList(args);
+        System.out.println("Argas "+ li);
+        
+        System.out.println("Enter 1st String");
+        String u1 = li.get(0).toLowerCase();
+        System.out.println("Enter 2nd String");
+        String u2 = li.get(1).toLowerCase();
+        System.out.println("Entered Strings are "+ u1 + " , "+ u2);
+
+        //sort
+
+        Collections.sort(Arrays.asList(u1.split("")));
+        Collections.sort(Arrays.asList(u2.split("")));
+        
+        System.out.println("Entered Strings post sort are "+ u1 + " , "+ u2);
+
+        int l1 = u1.length();
+        int l2 = u2.length();
+
+        System.out.println("Entered Strings length post sort are "+ l1 + " , "+ l2);
+
+        if (l1 != l2)
+            System.out.println("Not Anagram");
+        else 
+        {
+            for (int i=0; i<l1; i++) {
+                int c1 = u1.chars().filter(ch -> ch == u1.charAt(i)).count();
+                int c2 = u2.chars().filter(ch -> ch == u1.charAt(i)).count();
+                if (c1 != c2) {
+                    System.out.println("Not Anagram");
+                    break;
+                }
+            }
+        }
+        
+
+
+    }
+}

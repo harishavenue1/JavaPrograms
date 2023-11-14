@@ -1,0 +1,51 @@
+// tip: each public class is put in its own file
+import java.util.*;
+public class Test1
+{
+    // tip: arguments are passed via the field below this editor
+    public static void main(String[] args)
+    {
+        List<String> li = Arrays.asList(args);
+        System.out.println("Argas "+ li);
+        
+        System.out.println("Enter 1st String");
+        String u1 = li.get(0).toLowerCase();
+        System.out.println("Enter 2nd String");
+        String u2 = li.get(1).toLowerCase();
+        System.out.println("Entered Strings are "+ u1 + " , "+ u2);
+
+        //sort
+
+        Collections.sort(Arrays.asList(u1.split("")));
+        Collections.sort(Arrays.asList(u2.split("")));
+        
+        System.out.println("Entered Strings post sort are "+ u1 + " , "+ u2);
+
+        int l1 = u1.length();
+        int l2 = u2.length();
+
+        System.out.println("Entered Strings length post sort are "+ l1 + " , "+ l2);
+
+        boolean flag = true;
+        if (l1 != l2)
+            System.out.println("Not Anagram");
+        else 
+        {
+            for (char ch: u1.toCharArray()) {
+                int c1 = (int) u1.chars().filter(c -> c == ch).count();
+                int c2 = (int) u2.chars().filter(c -> c == ch).count();
+                if (c1 != c2) {
+                    System.out.println("Not Anagram, Count of Char for U1, U2 is '"+ ch + "' is "+ c1 +","+ c2);
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        
+        if (flag)
+        	System.out.println("Anagram");
+        
+
+
+    }
+}

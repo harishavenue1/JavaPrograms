@@ -1,0 +1,34 @@
+// tip: each public class is put in its own file
+import java.io.File;
+import java.io.*;
+public class Files_and_Files
+{
+    // tip: arguments are passed via the field below this editor
+    public static void main(String[] args)
+    {
+        File f = null;
+        try {
+            f = new File("./src.txt");
+            f.createNewFile();
+        } catch(Exception e) {
+            System.out.println("Failed to Create file");
+        }
+
+        // write
+        try {
+            FileWriter fw = new FileWriter(f);
+            fw.write("Written");
+        } catch(Exception e) {
+            System.out.println("Failed to write file");
+        }
+
+        // read
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(f));
+            String s = br.readLine();
+            System.out.println(s);
+        } catch(Exception e) {
+            System.out.println("Failed to read file");
+        }
+    }
+}
