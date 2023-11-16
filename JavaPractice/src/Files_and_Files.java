@@ -21,6 +21,7 @@ public class Files_and_Files
             fw.println("Written By Harish using PrintWriter - Line2");
             fw.flush();
             fw.close();
+            
         } catch(Exception e) {
             System.out.println("Failed to write file");
         }
