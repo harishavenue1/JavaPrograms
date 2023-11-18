@@ -50,6 +50,7 @@ public class Iteration {
 		
 		System.out.println("after replacement");
 		ll.stream().forEach(System.out::println);
+		
 	}
 
 }
