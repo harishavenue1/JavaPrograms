@@ -4,7 +4,7 @@ public class CharReplaceInString {
 
 	
 	public static void main(String[] args) {
-		String s = "tomorrow";
+		String s = "tomorrowo_o_o_o";
 		int count = 1;
 		StringBuilder sb = new StringBuilder();
 		for (int i=0; i<s.toCharArray().length; i++) {
