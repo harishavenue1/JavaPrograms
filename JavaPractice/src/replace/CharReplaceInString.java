@@ -2,7 +2,6 @@ package replace;
 
 public class CharReplaceInString {
 
-	
 	public static void main(String[] args) {
 		String s = "tomorrowo_o_o_o";
 		int count = 1;
@@ -15,6 +14,19 @@ public class CharReplaceInString {
 				count++;
 				s = s.substring(0,i) + sb.toString() + s.substring(i+1);
 				sb = new StringBuilder();
+			}
+		}
+		System.out.println(s);
+	}
+
+	// simple - use of repeat method
+	public static void main(String[] args) {
+		String s = "tomorrowo_o_o_o";
+		int count = 1;
+		for (int i=0; i<s.toCharArray().length; i++) {
+			if (s.charAt(i) == 'o') {
+				s = s.substring(0,i) + "$".repeat(count) + s.substring(i+1);
+				count++;
 			}
 		}
 		System.out.println(s);
