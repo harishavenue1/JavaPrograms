@@ -11,8 +11,11 @@ public class CharReplaceInStringWithInt {
         int replacementCount = 1;
         for (char c : inputString.toCharArray()) {
             if (c == 'o') {
-                result.append(IntStream.range(1,replacementCount+1).mapToObj(Integer::toString).collect(Collectors.joining("")));
-                replacementCount += 1;
+                result.append(IntStream.range(1,++replacementCount)
+//                		.mapToObj(Integer::toString)
+                		.mapToObj(e->String.valueOf(e))
+                		.collect(Collectors.joining("")));
+//                replacementCount += 1;
             } else {
                 result.append(c);
             }

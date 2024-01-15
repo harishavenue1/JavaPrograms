@@ -47,7 +47,7 @@ public class Anagram_List_String_Char_Counts
             char[] ch2 = u2.toCharArray();
             Arrays.sort(ch1);
             Arrays.sort(ch2);
-             System.out.println("Entered Strings post char sort are "+ Arrays.toString(ch1) + " , "+ Arrays.toString(ch2));
+            System.out.println("Entered Strings post char sort are "+ new String(ch1) + " , "+ new String(ch2));
             if(Arrays.equals(ch1, ch2)) {
                 System.out.println("Anagram - Char Array Comparison");
             } else {
@@ -55,7 +55,7 @@ public class Anagram_List_String_Char_Counts
             }
 
             boolean flag = true;
-            // charArray count comparison
+            // charArray count comparison // using chars() method
             for (int i=0; i<l1; i++) {
                 char c = u1.charAt(i);
                 long c1 = u1.chars().filter(ch -> ch == c).count();

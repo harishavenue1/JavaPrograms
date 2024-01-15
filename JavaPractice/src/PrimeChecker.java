@@ -3,6 +3,8 @@ public class PrimeChecker {
 
 	public static void main(String[] args) {
 
+		// print prime numbers
+		
 		int count = 25;
 		isPrimeCheck(count);
 		for (int i = 1; i < count; i++) {
