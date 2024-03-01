@@ -1,5 +1,7 @@
 package Algo;
 
+import java.util.Arrays;
+
 public class RemoveDuplicates {
 
 	public static void main(String[] args) {
@@ -18,5 +20,7 @@ public class RemoveDuplicates {
 		for (int i=0; i<slow+1;i++) {
 			System.out.println(arr[i]);
 		}
+		
+		Arrays.stream(arr, 0, slow+1).forEach(System.out::println);
 	}
 }

@@ -43,7 +43,7 @@ public class Iteration {
 		while(lit.hasNext()) {
 			s = lit.next();
 			if(s.equals("A"))
-				lit.set("D");
+				lit.remove();
 			else if (s.equals("D"))
 				lit.set("A");
 		}

@@ -15,6 +15,7 @@ public class CharReplaceNotStringreplace {
 				lit.set('&');
 			}
 		}
-		li.forEach(System.out::print);
+		li.forEach(System.out::println);
+		System.out.println(String.join("", li.stream().map(String::valueOf).collect(Collectors.joining())));
 	}
 }

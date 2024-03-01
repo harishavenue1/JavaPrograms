@@ -1,6 +1,5 @@
 // tip: each public class is put in its own file
 import java.util.*;
-import java.util.Collections;
 
 public class Anagram_List_String_Char_Counts
 {

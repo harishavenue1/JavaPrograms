@@ -1,9 +1,7 @@
 package streamOp;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+import java.util.*;
+import java.util.stream.*;
 
 public class Operate_In_Stream {
 	
@@ -12,7 +10,7 @@ public class Operate_In_Stream {
 		// convert integer to string during stream range
 		List<String> li = IntStream
 							.range(1, 10)
-							.mapToObj(e->String.valueOf(e))
+							.mapToObj(String::valueOf)
 							.collect(Collectors.toList());
 		
         li.forEach(System.out::println);
