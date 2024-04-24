@@ -13,7 +13,7 @@ public class Operate_In_Stream {
 							.mapToObj(String::valueOf)
 							.collect(Collectors.toList());
 		
-        li.forEach(System.out::println);
+        li.forEach(System.out::print);
         
 	}
 

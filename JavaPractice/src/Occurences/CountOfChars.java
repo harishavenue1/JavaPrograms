@@ -28,12 +28,12 @@ public class CountOfChars {
 		System.out.println("Using Map");
 		Map<Character, Integer> map = new LinkedHashMap<>();
 		for(char c: s.toCharArray()) {
-			if (map.containsKey(c)) {
-				map.put(c, map.get(c)+1);
-			} else 
-				map.put(c, 1);
+			map.put(c, map.getOrDefault(c, 0)+1);
 		}
 		map.entrySet().stream().forEach(System.out::println);
+		map.forEach((k,v)->{
+			System.out.println("Key "+ k +" = "+v);
+		});
 	}
 
 }
