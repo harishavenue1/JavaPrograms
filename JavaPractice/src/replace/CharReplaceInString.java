@@ -1,8 +1,7 @@
 package replace;
 
-public class CharReplaceInString {
-
-	
+public class CharReplaceInString
+{	
 	public static void main(String[] args) {
 		String s = "tomorrowo_o_o_o";
 		int count = 1;

@@ -18,13 +18,6 @@ public class LongestRepeatingCharReplacement {
 		for (int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
 			charFreq.put(c, charFreq.getOrDefault(c, 0) + 1);
-			// We can alternatively iterate through the map to fetch the most frequent
-			// character
-			// which means at worst case looping through 26 times (No. of English capital
-			// letters) for each character iterated
-			// Here we're checking if count of current char > mostFreqCount, then we'll
-			// update mostFreqCount and increase windowsize
-			// Else we'll slide the window
 			mostFreqCount = Math.max(mostFreqCount, charFreq.get(c));
 
 			// Slide the window if adding this new character into the window will result in

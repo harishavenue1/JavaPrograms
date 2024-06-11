@@ -1,5 +1,7 @@
 package Amazon;
 
+import java.util.Arrays;
+
 public class MergeTwoSortedArray 
 { 
     // Merge arr1[0..n1-1] and arr2[0..n2-1]  
@@ -38,11 +40,9 @@ public class MergeTwoSortedArray
       
         int[] arr2 = {2, 4, 6, 8}; 
         int n2 = arr2.length; 
-      
+
         int[] arr3 = new int[n1+n2]; 
-          
         mergeArrays(arr1, arr2, n1, n2, arr3); 
-      
         System.out.println("Array after merging"); 
         for (int i=0; i < n1+n2; i++) 
             System.out.print(arr3[i] + " "); 

@@ -31,7 +31,7 @@ public class Max_Min_InArray {
 			if (arr[fast] > arr[slow]) {
 				maxDiff = Math.max(maxDiff, (arr[fast] - arr[slow]));
 			} else {
-				slow++;
+				slow=fast;
 			}
 			fast++;
 		}

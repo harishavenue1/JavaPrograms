@@ -2,6 +2,7 @@ package Occurences;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class CountOfChars {
 	
@@ -34,6 +35,9 @@ public class CountOfChars {
 		map.forEach((k,v)->{
 			System.out.println("Key "+ k +" = "+v);
 		});
+		Map<Object, Long> mapC = s.chars().mapToObj(e->(char)e).collect(Collectors.groupingBy(x->x, Collectors.counting()));
+		System.out.println(mapC);
+		System.out.println("Max Key "+ mapC.entrySet().stream().max(Map.Entry.comparingByValue()).map(Map.Entry::getKey).get());
 	}
 
 }

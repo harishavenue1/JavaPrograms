@@ -19,7 +19,7 @@ public class DiffInList {
         System.out.println("Missing Number "+ expected);
     }
     
-    public static void missingNum(int[] nums) 
+    public static void missingNum(int[] nums)
     {
         int length = nums.length;
         int expected = ((length+1) * length / 2);

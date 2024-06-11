@@ -10,7 +10,8 @@ public class Operate_In_Stream {
 		// convert integer to string during stream range
 		List<String> li = IntStream
 							.range(1, 10)
-							.mapToObj(String::valueOf)
+							.boxed()
+							.map(String::valueOf)
 							.collect(Collectors.toList());
 		
         li.forEach(System.out::print);

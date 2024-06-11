@@ -13,14 +13,15 @@ public class RemoveDuplicates {
 			if (arr[slow] != arr[fast]) {
 				slow++;
 				arr[slow] = arr[fast];
-			}fast=fast+1;
+			}
+			fast = fast + 1;
 		}
-		
+
 		// final array
-		for (int i=0; i<slow+1;i++) {
+		for (int i = 0; i < slow + 1; i++) {
 			System.out.println(arr[i]);
 		}
-		
-		Arrays.stream(arr, 0, slow+1).forEach(System.out::println);
+
+		Arrays.stream(arr, 0, slow + 1).forEach(System.out::println);
 	}
 }

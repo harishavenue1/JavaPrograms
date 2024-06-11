@@ -42,7 +42,6 @@ public class segreggatearray {
 	        segregate0and1(arr, n); 
 	        print(arr, n); 
 	        Arrays.stream(arr).forEach(System.out::print);
-	          
 	    } 
 	} 
 	  
