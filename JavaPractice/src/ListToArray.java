@@ -1,4 +1,7 @@
-class GFG { 
+import java.util.LinkedList;
+import java.util.List;
+
+class ListToArray { 
   
     // Main driver method 
     public static void main(String[] args) 
@@ -14,22 +17,19 @@ class GFG {
         list.add("Geeks"); 
         list.add("Practice"); 
   
-        // Storing size of List 
-        int n = list.size(); 
-  
         // Converting List to array via scope resolution 
         // operator using streams 
-        String[] arr 
-            = list.stream().toArray(String[] ::new); 
+        String[] arr = list.stream().toArray(String[]::new); 
   
         // Printing elements of array 
         // using enhanced for loop 
         for (String x : arr) 
             System.out.print(x + " "); 
 
+        System.out.println();
         // Converting List to array 
         // using toArray() method 
-        String[] arr1 = list.toArray(new String[0]); 
+        String[] arr1 = list.toArray(String[]::new);
   
         // Printing elements of array 
         // using for-each loop 
