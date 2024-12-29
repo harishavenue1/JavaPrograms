@@ -1,4 +1,6 @@
 // tip: each public class is put in its own file
+package examples;
+
 import java.util.stream.*;
 
 public class Fibonacci

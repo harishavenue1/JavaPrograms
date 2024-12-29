@@ -1,3 +1,4 @@
+package examples;
 public class LongestCommonSubSeq {
 
 	public static void main(String[] args) {

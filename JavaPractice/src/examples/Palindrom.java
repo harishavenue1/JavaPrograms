@@ -1,4 +1,6 @@
 // tip: each public class is put in its own file
+package examples;
+
 public class Palindrom {
 	// tip: arguments are passed via the field below this editor
 	public static void main(String[] args) {

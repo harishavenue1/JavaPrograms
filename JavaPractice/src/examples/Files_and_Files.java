@@ -1,4 +1,6 @@
 // tip: each public class is put in its own file
+package examples;
+
 import java.io.File;
 import java.io.*;
 public class Files_and_Files
